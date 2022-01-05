@@ -5,6 +5,9 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import { Context } from "./context";
 import Body from "./components/Body";
+import DnDFlow from "./components/diagramm";
+import V2Example from "./components/Xarrow";
+
 
 export default function App() {
   const [isDark, toggleIsDark] = useState(false);
@@ -20,7 +23,9 @@ export default function App() {
     <Context.Provider value={ctx}>
       <Router>
         <Provider store={store}>
-          <Body></Body>
+          {/* <Body></Body> */}
+          {/* <DnDFlow></DnDFlow> */}
+          <V2Example/>
         </Provider>
       </Router>
     </Context.Provider>
